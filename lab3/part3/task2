@@ -1,0 +1,70 @@
+//Arrays predefined methods
+//---------------------------
+// 1-
+    concat()
+// method concatenates (joins) two or more arrays.
+// Example
+const arr1 = ["Cecilie", "Lone"];
+const arr2 = ["Emil", "Tobias", "Linus"];
+const arr3 = ["Robin"];
+const children = arr1.concat(arr2, arr3);  //Cecilie,Lone,Emil,Tobias,Linus,Robin
+
+// 2-
+     every()
+// method executes a function for each array element.
+const ages = [32, 33, 16, 40];
+
+ages.every(checkAge)
+
+function checkAge(age) {
+  return age > 18;
+} //
+
+// 3-
+     fill()
+//method fills specified elements in an array with a value.
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.fill("Kiwi"); //Kiwi,Kiwi,Kiwi,Kiwi
+
+// 4-
+     Array.from()
+// method returns an array from any object with a length property.
+let text = "ABCDEFG"
+const myArr = Array.from(text); //A,B,C,D,E,F,G
+
+// 5-
+     includes()
+//  method returns true if an array contains a specified value.
+const fruit = ["Banana", "Orange", "Apple", "Mango"];
+fruit.includes("Mango"); //true
+
+// 6-
+     isArray()
+//method returns true if an object is an array, otherwise false.
+const fruit1 = ["Banana", "Orange", "Apple", "Mango"];
+let result = Array.isArray(fruit1); //true
+
+// 7-
+     join()
+//method returns an array as a string.
+const fruit2 = ["Banana", "Orange", "Apple", "Mango"];
+let text1 = fruit2.join(" and ");
+
+// 8-
+     valueOf()
+// method returns the array itself.
+const fruit3 = ["Banana", "Orange", "Apple", "Mango"];
+const myArray = fruit3;
+
+// 9- 
+     unshift()
+// method adds new elements to the beginning of an array.
+const fruit4 = ["Banana", "Orange", "Apple", "Mango"];
+fruit4.unshift("Lemon","Pineapple"); //Lemon,Pineapple,Banana,Orange,Apple,Mango
+
+// 10-
+     sort()
+// sorts the elements of an array.
+const fruit5 = ["Banana", "Orange", "Apple", "Mango"];
+fruit5.sort(); //Apple,Banana,Mango,Orange
+

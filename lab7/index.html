@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet"
+            href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid cont   ">
+            <div class="form  p-5" id="form">
+                <form>
+                    <div class="row mb-3">
+                      <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+                      <div class="col-sm-10">
+                        <input type="name" class="form-control" id="inputEmail3">
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                      <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword3">
+                      </div>
+                    </div>
+                    
+                    <div id="btn">
+                        <button type="button" class=" btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="validate()">
+                           Login
+                          </button>
+                </div>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="modalBody">
+                          <p  id="mbody"></p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </form></div>
+        </div>
+        <script>
+            document.body.style.backgroundColor=" rgb(183, 226, 117)";
+            document.getElementById("form").style.width="40%";
+            document.getElementById("form").style.backgroundColor="white";
+            document.getElementById("btn").style.display="flex";
+            document.getElementById("btn").style.justifyContent="center";
+            // document.getElementById("mbody").innerHTML="hii";
+            function validate(){
+            if(document.getElementById("inputEmail3").value=="admin" && document.getElementById("inputPassword3").value=="123"){
+            document.getElementById("mbody").innerHTML="done";
+                
+            }
+            else if(document.getElementById("inputEmail3").value=="" && document.getElementById("inputPassword3").value==""){
+                document.getElementById("mbody").innerHTML="please enter data";
+            }
+            else if(document.getElementById("inputEmail3").value!="admin"){
+                document.getElementById("mbody").innerHTML="invalid name";
+
+            }
+            else if( document.getElementById("inputPassword3").value!="123"){
+                document.getElementById("mbody").innerHTML="invalid password";
+
+            }
+            else{
+                document.getElementById("mbody").innerHTML="Your data is wrong";
+
+            }
+        }
+        </script>
+        <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+    </body>
+</html>

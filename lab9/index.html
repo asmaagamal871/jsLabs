@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href="
+            https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css
+            " rel="stylesheet">
+        <title>Image gallery</title>
+    </head>
+    <body>
+        <div class="main">
+            <div class="slider">
+                <img src="imgs/brown-wooden-fence-1486269.jpg" alt=""/>
+                <div class="btn">
+                    <button onclick="back()">
+                        <i class="bx bx-chevron-left"></i>
+                    </button>
+                    <button onclick="next()">
+                        <i class="bx bx-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script>
+            var m= document.querySelector("img");
+            var imgs =["imgs/brown-wooden-fence-1486269.jpg",
+            "imgs/old-roof-tiles-3147511.jpg",
+            "imgs/texture-colored-wooden-boards-12702889.jpg",
+            "imgs/wooden-background-29495398.jpg"
+        ]
+        var n=0;
+            function next(){
+                n++;
+                if (n>=imgs.length){
+                    n=0;
+                    m.src=imgs[n];
+                }
+                else{
+                    m.src=imgs[n];
+                }
+            }
+            function back(){
+                n--;
+                if(n<0){
+                    n=imgs.length-1;
+                    m.src=img[n];
+                }
+                else{
+                    m.src=imgs[n];
+                }
+            }
+        </script>
+    </body>
+</html>

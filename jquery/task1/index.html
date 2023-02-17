@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <style>
+        .body{
+    background-image: linear-gradient(#69c39f,#cddee2);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+h1{
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 4%;
+}
+.slider-container{
+    display:flex;
+    justify-content: center; 
+}
+.image-slide{
+    display:none;
+    margin: 3%;
+}
+.image-slide img{
+    border-radius:5px;
+}
+.active{
+    display: block;
+}
+.stop-btn{
+    display:flex;
+    justify-content: center; 
+}
+.stop-btn button{
+    width: 15%;
+    padding: 1%;
+    font-size: large;
+    background-color: rgb(66, 178, 148);
+    border: hidden ;
+    color: white;
+    border-radius:10px;
+    font-weight: bold;
+}
+.stop-btn button:hover{
+    cursor:pointer;
+    opacity: 0.7;
+}
+    </style>
+</head>
+<body class="body">
+    
+    <div class="slider-container">
+        <div class="image-slide active">
+            <img src="imgs/1.jpg" alt="image-1" width="100%" height="400px">
+        </div>
+        <div class="image-slide">
+            <img src="imgs/2.jpg" alt="image-2" width="100%" height="400px">
+        </div>
+        <div class="image-slide">
+            <img src="imgs/3.jpg" alt="image-3" width="100%" height="400px">
+        </div>
+    </div>
+    <div class="stop-btn">
+        <button id="toggle">STOP</button>
+    </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.js"
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"
+    ></script>
+    <script src="./js/imageSlider.js"></script>
+
+</body>
+</html>

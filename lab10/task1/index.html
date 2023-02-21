@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+      href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap"
+      rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid cont ">
+      <div class="form p-5" id="form">
+        <form>
+          <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+              <input type="name" class="form-control" id="inputEmail3">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="inputPassword3">
+            </div>
+          </div>
+
+          <div id="btn">
+            <button type="button" class=" btn btn-success"
+              data-bs-toggle="modal" data-bs-target="#exampleModal"
+              onclick="validate()">
+              Login
+            </button>
+          </div>
+
+        </form></div>
+    </div>
+    <script>
+            document.body.style.backgroundColor=" rgb(183, 226, 117)";
+            document.getElementById("form").style.width="40%";
+            document.getElementById("form").style.backgroundColor="white";
+            document.getElementById("btn").style.display="flex";
+            document.getElementById("btn").style.justifyContent="center";
+            function validate(){
+               var usernameRegex =  /^[a-zA-Z\s]+$/;
+               var passwordregex= /^(?=.*[0-9])/;
+            if(usernameRegex.test(document.getElementById("inputEmail3").value) && passwordregex.test(document.getElementById("inputPassword3").value)){
+           console.log("done")
+                
+            }
+            else if(document.getElementById("inputEmail3").value=="" && document.getElementById("inputPassword3").value==""){
+               console.log("please enter data")
+            }
+            else{
+                console.log("please follow the regular expression");
+
+            }
+        }
+        </script>
+    <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
